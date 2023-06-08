@@ -1,23 +1,25 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Item {
-    private Long id;
+
+    private final List<Integer> itemsId;
 
     public Item() {
+        this.itemsId = new ArrayList<>();
+    }
+    public void setItemsId(List<Integer> items) {
+        for (Integer item : items) {
+            itemsId.add(item);
+        }
     }
 
-    public Item(Long id) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "В вашей корзине : " + itemsId.toString();
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
 }
 
 
