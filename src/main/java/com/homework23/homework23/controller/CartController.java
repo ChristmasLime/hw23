@@ -1,11 +1,7 @@
 package com.homework23.homework23.controller;
 
 import com.homework23.homework23.service.CartService;
-import model.Item;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController

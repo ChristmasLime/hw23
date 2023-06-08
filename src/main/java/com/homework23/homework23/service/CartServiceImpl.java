@@ -10,18 +10,18 @@ import java.util.List;
 @Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
 
 public class CartServiceImpl implements CartService {
-    private final List<Integer> items;
+    private final List<Integer> iD;
 
     public CartServiceImpl() {
-        this.items = new ArrayList<>();
+        this.iD = new ArrayList<>();
     }
 
     public void addItem(List<Integer> itemIds) {
-        items.addAll(itemIds);
+        iD.addAll(itemIds);
     }
 
     public String getItemsJSON() {
-        return "Корзина с товаром : " + items.toString() ;
+        return "Корзина с товаром : " + iD.toString() ;
     }
 }
 
